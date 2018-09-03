@@ -18,3 +18,13 @@ Router::get('/', function () {
 });
 
 Router::get('qlnv','QlnvController@index');
+
+Router::any('insertnv/','StudentController@insert');
+
+Router::get('/updatenv/{name}','StudentController@update');
+
+Router::get('/deletenv/{id}','StudentController@delete');
+
+Router::get('student',function() {
+    return view('student');
+});

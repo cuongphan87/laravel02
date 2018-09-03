@@ -2,14 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
+use App\Http\Models\Nhanvien;
 
 class QlnvController extends Controller
 {
     public function index() {
+        $allData = Nhanvien::all();
+        $nv002   = Nhanvien::where('manv','nv002')
+                    ->take(10)
+                    ->get();
+        
+        $nv       = Nhanvien::find('4');
+        foreach ($allData as $allData){
+//             echo $allData->hoten;
+        }
+        
+        foreach ($nv002 as $nv002) {
+//             echo $nv002->hoten;
+        }
+        
+        echo $nv->email;
         return view('qlnv');
     }
+    
+    
 }
