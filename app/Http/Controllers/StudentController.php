@@ -8,14 +8,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Http\Models\Nhanvien;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Http\Models\Student;
 
 class StudentController extends Controller
 {
     public function insert(Request $request) {
         $student = new Student();
+        $data = Input::all();
         
-        $student->name = $request->input('namenv');
+        $student->name = $data['name'];
         
        $student->save();
         echo 'Insert Name successfull: ' .$student->name;
