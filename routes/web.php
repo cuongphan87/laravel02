@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+use Illuminate\Routing\Router;
+
+Router::get('/', function () {
     return view('welcome');
 });
+
+Router::get('qlnv','QlnvController@index');
