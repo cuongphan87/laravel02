@@ -17,14 +17,26 @@ Router::get('/', function () {
     return view('welcome');
 });
 
+
+
+// Router::any('insertnv/','StudentController@insert');
+
+// Router::get('/updatenv/{name}','StudentController@update');
+
+// Router::get('/deletenv/{id}','StudentController@delete');
+
+// Router::get('student',function() {
+//     return view('student');
+// });
+
 Router::get('qlnv','QlnvController@index');
 
-Router::any('insertnv/','StudentController@insert');
+Router::post('uploadfile','UploadFileController@uploadFile');
 
-Router::get('/updatenv/{name}','StudentController@update');
+Router::get('/select','QlnvController@selectall');
 
-Router::get('/deletenv/{id}','StudentController@delete');
+Router::get('/insertnv','QlnvController@insertnv');
 
-Router::get('student',function() {
-    return view('student');
-});
+Router::get('/deletenv','QlnvController@deletenv');
+
+Router::get('/updatenv','QlnvController@updatenv');

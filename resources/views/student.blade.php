@@ -36,7 +36,7 @@
 		$.ajax({
 			url: '/insertnv',
 			dataType: 'text',
-			type: 'POST',
+			type: 'get',
 			data: {name:name},
 			success: function(mess) {
 				alert(mess);
