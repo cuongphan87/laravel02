@@ -25,9 +25,9 @@ Router::get('/', function () {
 
 // Router::get('/deletenv/{id}','StudentController@delete');
 
-// Router::get('student',function() {
-//     return view('student');
-// });
+Router::get('student',function() {
+    return view('student');
+});
 
 Router::get('qlnv','QlnvController@index');
 
@@ -40,3 +40,5 @@ Router::get('/insertnv','QlnvController@insertnv');
 Router::get('/deletenv','QlnvController@deletenv');
 
 Router::get('/updatenv','QlnvController@updatenv');
+
+Router::any('/checknv','QlnvController@checkForm');

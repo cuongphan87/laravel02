@@ -13,10 +13,10 @@
 	<div class="container"> 
 		<div class="row"> 
 			<div class=col-md-12>
-				<form action="" method="">
+				<form action="/checknv" method="POST">
 					<input type="text" name="namenv" id="nv_name">
 					
-					<input type="button" name="ok" id="btn_ok" value="OKIE">
+					<input type="submit" name="ok" id="btn_ok" value="OKIE">
 				</form>
 			</div>
  		</div>
@@ -31,21 +31,21 @@
   	
   	<script type="text/javascript">
 
-  	$(document).on('click','#btn_ok',function() {
-		var name = $('#nv_name').val();
-		$.ajax({
-			url: '/insertnv',
-			dataType: 'text',
-			type: 'get',
-			data: {name:name},
-			success: function(mess) {
-				alert(mess);
-			}
-		});
-  	});
-  	$(document).ready(function(){
+//   	$(document).on('click','#btn_ok',function() {
+// 		var name = $('#nv_name').val();
+// 		$.ajax({
+// 			url: '/insertnv',
+// 			dataType: 'text',
+// 			type: 'get',
+// 			data: {name:name},
+// 			success: function(mess) {
+// 				alert(mess);
+// 			}
+// 		});
+//   	});
+//   	$(document).ready(function(){
   		
-	});
+// 	});
   	</script>
    
     

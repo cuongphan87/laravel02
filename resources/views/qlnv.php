@@ -345,14 +345,14 @@
 		var ngaysinh = $(this).parent().parent().parent().parent().children().find('.ns').val();
 		var hoten = $(this).parent().parent().parent().parent().children().find('.hoten').val();
 		var diachi = $(this).parent().parent().parent().parent().children().find('.add').val();
-		var phone = $(this).parent().parent().parent().parent().children().find('.mobile').val();
+		var mobile = $(this).parent().parent().parent().parent().children().find('.mobile').val();
 		var email = $(this).parent().parent().parent().parent().children().find('.email').val();
 		var luongcb = $(this).parent().parent().parent().parent().children().find('.luongcb').val();
 		var phucap = $(this).parent().parent().parent().parent().children().find('.phucap').val();
 		var tongluong = $(this).parent().parent().parent().parent().children().find('.tongluong').val();
 		
-// 		var image_name = $(this).parent().parent().parent().parent().children().find('#file_upload').val().split('\\');
-// 		var image = image_name[image_name.length-1];
+		var image_name = $(this).parent().parent().parent().parent().children().find('#file_upload').val().split('\\');
+		var image = image_name[image_name.length-1];
 		
 		if ($.trim(manv) == '') {
 			alert("Chua nhap ma nhan vien!");
@@ -376,7 +376,7 @@
 			return;
 		}
 
-		if (!validatePhone(phone)) {
+		if (!validatePhone(mobile)) {
 			
 			alert("So dien thoai sai dinh dang!");
 			return;
